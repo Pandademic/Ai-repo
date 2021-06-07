@@ -1,45 +1,67 @@
-<html>
-    <head>
-       <title>My Selfie App</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200&display=swap" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
-
-</head>
  
-<body>
-    <div class="container">
+<html>
+  <head>
+    <title>Image recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+  <div class="container">
+    
     <center>
-        <a href=""id="link"download="mySelfie.jpg"></a>
-        <h1>Voice Selfie: <img id="logo_img"src="selfie.jpg"></h1>
-        
+      <h3 class="btn btn-primary heading">IMAGE RECOGNITION</h3>
+      <br>
+      <br>
+
+      <p style="font-size: 22px;">Model is trained to identify the following objects: </p>
+      <b class="name_Of_Objects">
+        Ipad
         <hr>
-        <h4 style="color:red;">Please press allow as soon as popup comes. After you give a voice command</h4>
-        
-        <div class="form-group">
-            <h3>Say "take my selfie"</h3>
-            <label>Your voice output : </label>
-            <textarea class="form-control"id="textbox"readonly="true"></textarea>
-        </div>
-          <button class="btn btn-primary"onclick="start()">Start</button>
-        <p>Press the Start button</p>
-        
-        <label>Your webcam : </label>
-         <div id="camera">
-         </div>   
-        <br>
+        Paper
+        <hr>
+        Human
+        <hr>
+        Pillow
+        <hr>
+        Toy dog
+        <hr>
+      </b>
+      <label>Webcam View - </label>
+      <div id="camera"> 
+      </div>
+      <br>
+      <br>
+      <div id="result">
+      
+      </div>
+      <br>
+      <br>
+     <button onclick="take_snapshot()"class="btn btn-info">Capture image</button>
+      <br>
+      <br>
+      <button onclick="check()" class="btn btn-success">Indentify image</button>
 
-        <label>Your selife Will Display Here: </label>
-          <div id="result">
+      <br><br>
 
-          </div>
+      <br><br>
+
+      <p style="font-size: 22px;">Object :<span id="result_object_name"></span>   </p>
+      <p style="font-size: 22px;">Accuracy :<span id="result_object_accuracy"></span>  </p>
     </center>
-    </div>
 
-    <script src="main.js"></script>
-</body>
+  </div>
+<script src="main.js"></script>
+
+  </body>
 </html>
+
+ 
